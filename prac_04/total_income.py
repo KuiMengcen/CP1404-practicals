@@ -25,7 +25,6 @@ def calculate_income(incomes, number_of_months):
         total += income
         print_report(income, month, total)
 
-
 def print_report(income, month, total):
     print(f"Month{month:2} - Income: ${income:8.2f} Total: ${total:10.2f}")
 
