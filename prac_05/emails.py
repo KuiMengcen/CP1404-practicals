@@ -9,6 +9,16 @@ def main():
             print("Error")
             email = input("Enter your email(Must contain @): ")
 
+        name = get_name(email)
+        confirmation = input(f"Is your name {name}? (Y/N)").upper()
+        if confirmation.upper() !="Y" and confirmation != "":
+            name = input("Name: ")
+        email_to_name[email] = name
+        email = input("Enter your email(Must contain @): ")
+
+    print_email(email_to_name)
+
+
 def get_name(email):
     "Extract expected name from email address."
     prefix = email.split('@')[0]
