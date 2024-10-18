@@ -22,6 +22,15 @@ def process_records(records):
         return champion_to_count, countries
 
 
+def dispaly_results(champion_to_count, countries):
+    """Display champions and countries"""
+    print("Wimbledon Champions: ")
+    for name, count in champion_to_count.items():
+        print(name, count)
+    print(f"\nThese {len(countries)} countries have won Wimbledon: ")
+    print(",".join(country for country in sorted(countries)))
+
+
 def get_records(filename):
     """Get records from file in list of lists form."""
     records = []
@@ -33,3 +42,4 @@ def get_records(filename):
         return records
 
 
+main()
