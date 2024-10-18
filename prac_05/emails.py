@@ -19,6 +19,11 @@ def main():
     print_email(email_to_name)
 
 
+def print_email(email_to_name):
+    for email, name in email_to_name.items():
+        print(f"{name}({email})")
+
+
 def get_name(email):
     "Extract expected name from email address."
     prefix = email.split('@')[0]
