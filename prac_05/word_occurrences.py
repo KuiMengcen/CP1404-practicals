@@ -19,3 +19,8 @@ print(word_to_count)
 word_to_count = sorted(word_to_count.items(), key=itemgetter(0, 1))
 word_to_count = dict(word_to_count)
 print(word_to_count)
+
+
+for word in word_to_count:
+    if len(word) > word_length:
+        word_length = len(word)
