@@ -1,0 +1,3 @@
+FILENAME = "wimbledon.csv"
+INDEX_COUNTRY = 1
+INDEX_CHAMPION = 2
