@@ -24,3 +24,6 @@ print(word_to_count)
 for word in word_to_count:
     if len(word) > word_length:
         word_length = len(word)
+
+for word, count in word_to_count.items():
+    print(f"{word:<{word_length}} : {count}")
