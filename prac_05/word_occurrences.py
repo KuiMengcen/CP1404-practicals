@@ -14,3 +14,8 @@ for word in text:
     word_to_count[word] = word_count
 
 print(word_to_count)
+
+
+word_to_count = sorted(word_to_count.items(), key=itemgetter(0, 1))
+word_to_count = dict(word_to_count)
+print(word_to_count)
