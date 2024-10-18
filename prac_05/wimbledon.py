@@ -2,6 +2,7 @@ FILENAME = "wimbledon.csv"
 INDEX_COUNTRY = 1
 INDEX_CHAMPION = 2
 
+
 def main():
     """Read data file and print details about Wimbledon champions and countries."""
     records = get_records(FILENAME)
@@ -42,4 +43,3 @@ def get_records(filename):
         return records
 
 
-main()
