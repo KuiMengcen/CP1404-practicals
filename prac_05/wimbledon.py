@@ -9,6 +9,19 @@ def main():
     dispaly_results(champion_to_count, countries)
 
 
+def process_records(records):
+    """Create dictionary of champions and set of countries from records(list of lists)"""
+    champion_to_count = {}
+    countries = set()
+    for record in records:
+        countries.add(record[INDEX_COUNTRY])
+        try:
+            champion_to_count[record[INDEX_CHAMPION]] += 1
+        except KeyError:
+            champion_to_count[record[INDEX_CHAMPION]] = 1
+        return champion_to_count, countries
+
+
 def get_records(filename):
     """Get records from file in list of lists form."""
     records = []
@@ -18,3 +31,5 @@ def get_records(filename):
             parts = line.strip().split(".")
             records.append(parts)
         return records
+
+
