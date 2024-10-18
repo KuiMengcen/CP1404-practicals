@@ -10,7 +10,7 @@ def main():
             email = input("Enter your email(Must contain @): ")
 
         name = get_name(email)
-        confirmation = input(f"Is your name {name}? (Y/N)").upper()
+        confirmation = input(f"Is your name {name}? (Y/N) ").upper()
         if confirmation.upper() !="Y" and confirmation != "":
             name = input("Name: ")
         email_to_name[email] = name
@@ -30,3 +30,6 @@ def get_name(email):
     parts = prefix.split('.')
     name = " ".join(parts).title()
     return name
+
+
+main()
