@@ -22,3 +22,4 @@ Replace each `...` with your meaningful answer.
 ## What is one request you have or change you suggest for this subject and/or your IT degree overall?
 
 ...One suggestion for the Information Technology degree program is to work on more practical projects with industry and other disciplines. This exposure to real industry problems and working in diverse teams would provide valuable practical insights and better prepare us for the professional environment. It would also be beneficial to invite information technology professionals to give guest lectures to discuss current trends and future directions in technology.
+
