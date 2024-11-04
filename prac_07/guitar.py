@@ -1,5 +1,6 @@
-CURRENT_YEAR = 2024
-VINTAGE_YEAR = 50
+CURRENT_YEAR = 2023
+VINTAGE_AGE = 50
+
 
 class Guitar:
 
@@ -9,14 +10,11 @@ class Guitar:
         self.cost = cost
 
     def __str__(self):
-        return f"{self.name}, ({self.year}) : ${self.cost:,.2f}"
+        return f"{self.name} ({self.year}) : ${self.cost:,.2f}"
 
     def get_age(self):
         return CURRENT_YEAR - self.year
 
     def is_vintage(self):
-        return self.get_age() >= VINTAGE_YEAR
+        return self.get_age() >= VINTAGE_AGE
 
-    def __lt__(self, other):
-        """Less than, used for sorting Guitars - by year released."""
-        return self.year < other.year
