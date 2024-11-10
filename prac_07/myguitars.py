@@ -20,3 +20,13 @@ for item in in_file:
     parts = item.strip().split(',')
     guitar = Guitar(parts[0], int(parts[1]), parts[-1])
     guitars.append(guitar)
+
+name = input("Name: ")
+while name != "":
+    year = int(input("Year: "))
+    cost = float(input("Cost: "))
+    name = Guitar(name, year, cost)
+    print(name, "added.")
+    new_guitars.append(name)
+    print("\n")
+    name = input("Name: ")
