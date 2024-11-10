@@ -35,3 +35,9 @@ guitars += new_guitars
 guitars.sort()
 for guitar in guitars:
     print(guitar)
+
+with open("guitars.csv", "a") as file:
+    for guitar in new_guitars:
+        print(f"{guitar.name},{guitar.year},{guitar.cost}", file=file)
+
+in_file.close()
