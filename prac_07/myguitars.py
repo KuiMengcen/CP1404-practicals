@@ -4,4 +4,5 @@ class Guitar:
         self.year = guitar_year
         self.cost = guitar_cost
 
-
+    def __repr__(self):
+        return f"{self.name} ({self.year}) : ${self.cost}"
