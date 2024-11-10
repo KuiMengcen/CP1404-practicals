@@ -37,3 +37,20 @@ def main():
         choice = input(">>> ").strip().lower()
     save_projects(filename, projects)
     print("Thank you for using custom-built project management software.")
+
+
+def load_projects(filename):
+    projects = []
+    in_file = open(filename, 'r')
+    in_file.readline()
+    for line in in_file:
+        parts = line.strip().split('\t')
+        name = parts[0]
+        start_date = parts[1]
+        priority = int(parts[2])
+        cost_estimate = float(parts[3])
+        completion_percentage = int(parts[4])
+        project = Project(name, start_date, priority, cost_estimate, completion_percentage)
+        projects.append(project)
+    in_file.close()
+    return projects
