@@ -15,3 +15,8 @@ guitars = []
 new_guitars = []
 
 in_file = open("guitars.csv", "r")
+
+for item in in_file:
+    parts = item.strip().split(',')
+    guitar = Guitar(parts[0], int(parts[1]), parts[-1])
+    guitars.append(guitar)
