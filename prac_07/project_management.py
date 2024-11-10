@@ -80,3 +80,15 @@ def display_projects(projects):
     for project in projects:
         if project.completion_percentage == 100:
             print(project)
+
+
+def filter_projects_by_date(projects, start_after_date):
+    dates = []
+    for project in projects:
+        if project.compare_date_with_input_date(start_after_date):
+            dates.append(project.start_date)
+    dates.sort()
+    for date in dates:
+        for project in projects:
+            if date == project.start_date:
+                print(project)
