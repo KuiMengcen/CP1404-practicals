@@ -30,3 +30,8 @@ while name != "":
     new_guitars.append(name)
     print("\n")
     name = input("Name: ")
+
+guitars += new_guitars
+guitars.sort()
+for guitar in guitars:
+    print(guitar)
