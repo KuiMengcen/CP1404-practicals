@@ -14,3 +14,4 @@ class Guitar:
 guitars = []
 new_guitars = []
 
+in_file = open("guitars.csv", "r")
