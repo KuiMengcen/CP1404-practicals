@@ -68,3 +68,15 @@ def save_projects(filename, projects):
         print(f"{name}\t{start_date}\t{priority}\t{cost_estimate}\t{completion_percentage}", file=out_file)
 
     out_file.close()
+
+
+def display_projects(projects):
+    projects.sort()
+    print("Incomplete projects:")
+    for project in projects:
+        if project.completion_percentage < 100:
+            print(project)
+    print("Completed projects:")
+    for project in projects:
+        if project.completion_percentage == 100:
+            print(project)
