@@ -16,3 +16,7 @@ class Project:
 
     def __lt__(self, other):
         return self.priority < other.priority
+
+    def compare_date_with_input_date(self, start_after_date):
+        input_date = datetime.datetime.strptime(start_after_date, "%d/%m/%Y").date()
+        return self.start_date >= input_date
