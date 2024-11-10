@@ -7,6 +7,10 @@ class Guitar:
     def __repr__(self):
         return f"{self.name} ({self.year}) : ${self.cost}"
 
-
     def __lt__(self, other):
         return self.year < other.year
+
+
+guitars = []
+new_guitars = []
+
