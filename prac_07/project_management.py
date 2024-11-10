@@ -92,3 +92,14 @@ def filter_projects_by_date(projects, start_after_date):
         for project in projects:
             if date == project.start_date:
                 print(project)
+
+
+def add_new_project():
+    print("Let's add a new project")
+    name = input("Name: ")
+    start_date = input("Start date (dd/mm/yy): ")
+    priority = int(input("Priority: "))
+    cost_estimate = float(input("Cost estimate: $"))
+    completion_percentage = int(input("Percent complete: "))
+    project = Project(name, start_date, priority, cost_estimate, completion_percentage)
+    return project
