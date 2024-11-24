@@ -40,3 +40,12 @@ def drive_car(current_taxi, total_bill):
         print(f"Your {current_taxi.name} trip cost you ${float(current_taxi.get_fare()):.2f}")
         total_bill += float(current_taxi.get_fare())
     return total_bill
+
+
+def check_input(total_bill, user_choice) :
+    while user_choice != "Q" and user_choice != "C" and user_choice != "D":
+        print("Invalid option")
+        print(f"Bill to date: ${total_bill:.2f}")
+        print("q)uit, c)hoose taxi, d)rive")
+        user_choice = input(">>> ").upper()
+    return user_choice
