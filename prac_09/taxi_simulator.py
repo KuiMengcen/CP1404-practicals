@@ -3,6 +3,7 @@ from prac_09.taxi import Taxi
 
 taxis = [Taxi("Prius", 100), SilverServiceTaxi("Limo", 100, 2), SilverServiceTaxi("Hummer", 200, 4)]
 
+
 def main():
     current_taxi = None
     total_bill = 0
@@ -28,3 +29,14 @@ def main():
     print("Taxis are now:")
     for i, j in zip(taxis, range(0, len(taxis))):
         print(f"{j} - {i}")
+
+
+def drive_car(current_taxi, total_bill):
+    if current_taxi is None:
+        print("You need to choose a taxi before you can drive")
+    else:
+        drive_distance = float(input("Drive how far? "))
+        current_taxi.drive(drive_distance)
+        print(f"Your {current_taxi.name} trip cost you ${float(current_taxi.get_fare()):.2f}")
+        total_bill += float(current_taxi.get_fare())
+    return total_bill
