@@ -49,3 +49,12 @@ def check_input(total_bill, user_choice) :
         print("q)uit, c)hoose taxi, d)rive")
         user_choice = input(">>> ").upper()
     return user_choice
+
+
+def choose_taxi():
+    print("Taxis available: ")
+    for i, j in zip(taxis, range(0, len(taxis))):
+        print(f"{j} - {i}")
+    taxi_chosen = check_taxi_choice("Choose taxi: ")
+    return taxi_chosen
+
