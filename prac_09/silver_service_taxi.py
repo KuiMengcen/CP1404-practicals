@@ -10,3 +10,6 @@ class SilverServiceTaxi(Taxi):
 
     def __str__(self):
         return f"{super().__str__()}plus flagfall of ${self.flagfall:.2f}"
+
+    def get_fare(self):
+        return f"{super(SilverServiceTaxi, self).get_fare() + self.flagfall:.2f}"
