@@ -58,3 +58,14 @@ def choose_taxi():
     taxi_chosen = check_taxi_choice("Choose taxi: ")
     return taxi_chosen
 
+
+def check_taxi_choice(prompt):
+    choice = int(input(prompt))
+    if 0 <= choice <= len(taxis) - 1:
+        return taxis[choice]
+    else:
+        print("Invalid taxi choice")
+        return None
+
+
+main()
