@@ -14,3 +14,8 @@ def main():
     title = get_user_input()
     while title:
         try:
+            # Disable autosuggest to avoid the API suggesting other pages
+            page = wikipedia.page(title, auto_suggest=False)
+            print_page_details(page)
+        except wikipedia.exceptions.DisambiguationError as e:
+            print("\nWe need a more specific title. Try one of the following, or a new search:")
