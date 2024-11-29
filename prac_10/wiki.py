@@ -1,16 +1,18 @@
 import wikipedia
 import warnings
 
-#Ignore BeautifulSoup warnings
+# Ignore BeautifulSoup warnings
 warnings.filterwarnings("ignore", category=UserWarning, module="wikipedia")
 
+
 def get_user_input(prompt="Enter page title: "):
-    """Get user input"""
+    """获取用户输入"""
     return input(prompt)
+
 
 def main():
     print("Welcome to the Wikipedia Search Tool!")
-    # First time getting user input
+    # Get user input for the first time
     title = get_user_input()
     while title:
         try:
@@ -19,16 +21,16 @@ def main():
             print_page_details(page)
         except wikipedia.exceptions.DisambiguationError as e:
             print("\nWe need a more specific title. Try one of the following, or a new search:")
-            print(f"(BeautifulSoup warning) \n{e.options[:5]}...")  # Show the first 5 options and end with an apostrophe
+            print(f"(BeautifulSoup warning) \n{e.options[:5]}...")  # Show first 5 options
         except wikipedia.exceptions.PageError:
             print(f"\nPage id \"{title}\" does not match any pages. Try another id!")
         except Exception as e:
             print(f"An error occurred: {e}")
 
-            # Getting new user input
-            title = get_user_input("\nEnter page title: ")
+        # Get new user input
+        title = get_user_input("\nEnter page title: ")
 
-        print("Thank you.")
+    print("Thank you.")
 
 
 def print_page_details(page):
