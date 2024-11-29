@@ -71,3 +71,5 @@ doctest.testmod()
 def format_phrase(words):
     if words[0].islower():
         words = words[0].upper() + words[1:]
+        if words[-1] != ".":
+            words += "."
