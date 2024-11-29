@@ -46,14 +46,14 @@ def run_tests():
     # using the value passed in or the default
     # You should test both of these
     car = Car(fuel=10)
-    assert teat_car.fule > 0
+    assert teat_car.fule > 0 "Car does not set odometer correctly"
 
 
 run_tests()
 
 # TODO: 3. Uncomment the following line and run the doctests
 # (PyCharm may see your >>> doctest comments and run doctests anyway.)
-# doctest.testmod()
+doctest.testmod()
 
 # TODO: 4. Fix the failing is_long_word function
 # (Don't change the tests, change the function!)
@@ -67,3 +67,7 @@ run_tests()
 # and one more that you decide is a useful test.
 # Run your doctests and watch the tests fail.
 # Then write the body of the function so that the tests pass.
+
+def format_phrase(words):
+    if words[0].islower():
+        words = words[0].upper() + words[1:]
