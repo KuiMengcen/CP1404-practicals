@@ -29,3 +29,14 @@ def main():
             title = get_user_input("\nEnter page title: ")
 
         print("Thank you.")
+
+
+def print_page_details(page):
+    """Print page titles, summaries, and URLs."""
+    print(f"\n{page.title}")
+    print(wikipedia.summary(page.title, sentences=2))
+    print(page.url)
+
+
+if __name__ == "__main__":
+    main()
