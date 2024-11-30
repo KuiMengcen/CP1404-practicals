@@ -74,4 +74,5 @@ def format_phrase(words):
         words = words[0].upper() + words[1:]
     if words[-1] != ".":
         words += "."
+    return words
 
