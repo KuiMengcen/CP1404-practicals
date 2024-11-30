@@ -21,3 +21,4 @@ def main():
             print_page_details(page)
         except wikipedia.exceptions.DisambiguationError as e:
             print("\nWe need a more specific title. Try one of the following, or a new search:")
+            print(f"(BeautifulSoup warning) \n{e.options[:5]}...")  # Show the first 5 options and end with an apostrophe
