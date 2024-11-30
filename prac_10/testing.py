@@ -76,3 +76,9 @@ def format_phrase(words):
         words += "."
     return words
 
+
+assert format_phrase('hello') == 'Hello.'
+
+assert format_phrase('It is an ex parrot.') == 'It is an ex parrot.'
+
+assert format_phrase('Good') == 'Good.'
